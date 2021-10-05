@@ -1,0 +1,218 @@
+.button {
+  background-color: #fdfdfd;
+  border-radius: 4px;
+  border: none;
+  color: #0a2138;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  max-width: 18rem;
+  min-width: 8rem;
+  outline: none;
+  padding: 0.8rem 1.4rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.1s ease-in;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+
+  &.no-border {
+    border-radius: 0;
+  }
+
+  &.custom {
+    &:hover {
+      background-color: var(--custom-hover) !important;
+    }
+  }
+
+  //for download link button with image on left side
+  &.download {
+    color: var(--primary-color);
+    display: inline-flex;
+    align-items: center;
+
+    svg,
+    img {
+      margin-right: 1rem;
+    }
+  }
+
+  &.disconnect {
+    background-color: #ff5353;
+    border: 0;
+    font-size: 1rem;
+    color: var(--pure-white);
+    padding: 0.6rem 1rem;
+    margin-left: 1rem;
+
+    &:hover {
+      background-color: #ee2a2a;
+    }
+  }
+
+  // button with icon on left side
+  &.icon {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 1rem;
+    }
+   
+
+    &:active {
+      &:not(.shadow) {
+        background: none;
+      }
+    }
+  }
+
+  &.iconOnly {
+    min-width: inherit;
+    max-width: inherit;
+  }
+
+
+
+  // circle loader state in button
+  &.with__loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: unset;
+    max-width: unset;
+    svg {
+      margin-right: 0.4rem;
+    }
+  }
+
+  &:hover {
+    background-color: #f4f4f4;
+  }
+
+  &.shadow {
+    box-shadow: var(--shadow-type-2);
+  }
+
+  &.transparent {
+    background-color: transparent;
+
+    &:active {
+      background: none;
+    }
+  }
+
+  &.outline {
+    border: 1px solid var(--primary-color);
+    font-weight: 600;
+    border-radius: 0;
+    color: var(--primary-color);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--primary-color-dark);
+      color: var(--pure-white);
+    }
+  }
+
+  &.primary,
+  &.secondary,
+  &.yellow {
+    color: #0a2138;
+    font-weight: 600;
+  }
+
+  &.cancel {
+    background-color: #f4f4f4;
+
+    &:hover {
+      background-color: #e5e1e1;
+    }
+  }
+
+  &.yellow {
+    background-color: var(--dark-yellow);
+
+    &:hover,
+    &:focus {
+      background-color: var(--dark-yellow-hover);
+    }
+  }
+
+  &.primary {
+    background-color: var(--primary-color-dark);
+    border: 1px solid var(--primary-color);
+
+    &:hover {
+      background-color: var(--primary-color-hover);
+    }
+  }
+
+  &.secondary {
+    background-color: #d3d6d7;
+  }
+
+  &.danger {
+    background-color: #d81f24;
+    border-color: #d81f24;
+    color: var(--pure-white);
+
+    &:hover {
+      background-color: #c01a20;
+      border-color: #c01a20;
+    }
+  }
+
+  &:disabled {
+    background-color: var(--disabled-color);
+    border: 1px solid var(--disabled-color);
+    color: #9b9b9b !important;
+    cursor: not-allowed;
+
+    // opacity: 0.6;
+
+    &:hover,
+    &:active {
+      background-color: var(--disabled-color) !important;
+      border: 1px solid var(--disabled-color) !important;
+    }
+  }
+
+  &:active {
+    transition: 0.1s;
+
+    &.shadow {
+      box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:not(.shadow) {
+      background-color: #f3f3f3;
+
+      &.primary {
+        background-color: var(--primary-color-hover);
+      }
+
+      &.yellow {
+        background-color: var(--dark-yellow-hover);
+      }
+
+      &.secondary {
+        background-color: #bfc2c3;
+      }
+
+      &.outline {
+        background-color: var(--primary-color-dark);
+      }
+
+      &.transparent {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.cancel-btn {
+    background-color: #f4f4f4;
+  }
+}

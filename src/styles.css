@@ -1,0 +1,14 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.buttons__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid black;
+}
+
+button {
+  margin: 1rem;
+}

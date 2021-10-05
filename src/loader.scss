@@ -1,0 +1,46 @@
+$perimeter: 60;
+
+
+    svg {
+      .loader {
+        animation: spin 1s infinite linear, shiftColor 1s forwards linear;
+      }
+    }
+
+
+svg {
+  fill: transparent;
+
+  .loader {
+    stroke-linecap: round;
+    stroke-dasharray: 40;
+    transform-origin: center;
+    animation: spin 1s infinite linear;
+
+    &.large {
+      stroke-dasharray: 100;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shiftColor {
+  0% {
+    stroke: #17d6df;
+    stroke-dasharray: 40;
+  }
+
+  100% {
+    stroke: #4bb543;
+    stroke-dasharray: 120;
+  }
+}
